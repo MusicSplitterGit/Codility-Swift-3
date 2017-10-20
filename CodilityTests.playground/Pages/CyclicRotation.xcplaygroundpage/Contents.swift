@@ -20,6 +20,14 @@ import Foundation
  No performance requests
  */
 
+public func rotK(_ A : inout [Int], _ K : Int) -> [Int] {
+    let subArray = A[A.count-K...A.count-1]
+    A.removeLast(K)
+    return subArray + A
+}
+
+
+
 public func rotK(_ A : [Int], _ K : Int) -> [Int] {
     let n = A.count
     var O = A
